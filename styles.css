@@ -1,0 +1,228 @@
+.tablinks {
+    font-size: 20px;
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ebe1e1;
+  background-color: #d190f7;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+
+  padding: 30px 25px;
+  transition: 0.2s;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ffffff;
+  border-top: none;
+
+}
+.munch {
+    text-align: center;
+    padding: 1px;
+    font-size: 20px;
+}
+
+.featured-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+    margin-top: 24px;
+}
+
+.featured-header span {
+    background: #fff;
+    border: 2px solid #222;
+    border-radius: 4px;
+    padding: 8px 24px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.food-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+}
+
+.food-card {
+    background: #f6f6f6;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px 16px 16px;
+    width: 180px;
+    transition: box-shadow 0.2s;
+}
+
+.food-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    background: #e8e8e8;
+}
+
+.food-label {
+    font-weight: 600;
+    color: #444;
+    font-size: 1.05rem;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.drink-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+}
+
+.drink-card {
+    background: #f6f6f6;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px 16px 16px;
+    width: 180px;
+    transition: box-shadow 0.2s;
+}
+
+.drink-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    background: #e8e8e8;
+}
+
+.drink-label {
+    font-weight: 600;
+    color: #444;
+    font-size: 1.05rem;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.sauce-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+}
+.sauce-card {
+    background: #f6f6f6;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px 16px 16px;
+    width: 180px;
+    transition: box-shadow 0.2s;
+}
+
+.sauce-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    background: #e8e8e8;
+}
+
+.sauce-label {
+    font-weight: 600;
+    color: #444;
+    font-size: 1.05rem;
+    margin-top: 8px;
+    text-align: center;
+}
+.snack-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+}
+.snack-card {
+    background: #f6f6f6;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px 16px 16px;
+    width: 180px;
+    transition: box-shadow 0.2s;
+}
+
+.snack-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    background: #e8e8e8;
+}
+
+.snack-label {
+    font-weight: 600;
+    color: #444;
+    font-size: 1.05rem;
+    margin-top: 8px;
+    text-align: center;
+}
+.dessert-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+}.dessert-card {
+    background: #f6f6f6;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px 16px 16px;
+    width: 180px;
+    transition: box-shadow 0.2s;
+}
+.dessert-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    background: #e8e8e8;
+}
+.dessert-label {
+    font-weight: 600;
+    color: #444;
+    font-size: 1.05rem;
+    margin-top: 8px;
+    text-align: center;
+}
