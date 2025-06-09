@@ -59,3 +59,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     document.getElementById('clear-cart-button').addEventListener('click', clearCart);});
+
+    document.addEventListener('DOMContentLoaded', function() {
+    // ...existing code...
+    const orderForm = document.getElementById('order-form');
+    const checkoutButton = document.getElementById('checkout-button');
+    const orderSuccess = document.getElementById('order-success');
+
+    checkoutButton.addEventListener('click', function() {
+        orderForm.style.display = 'block';
+        orderSuccess.style.display = 'none';
+    });
+
+    orderForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        orderForm.style.display = 'none';
+        orderSuccess.style.display = 'block';
+        clearCart();
+    });
+    });
