@@ -1,3 +1,21 @@
+.title {
+      color: rgb(0, 0, 0);
+      padding: 20px;
+      text-align: center;
+      align-items: center;
+}
+
+.title h1 {
+      margin: 0;
+      font-size: 2.5rem;
+}
+
+.title p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+
 .tablinks {
     font-size: 20px;
 }
@@ -6,6 +24,10 @@
   overflow: hidden;
   border: 1px solid #ebe1e1;
   background-color: #d190f7;
+  border-radius : 8px;
+  display : flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .tab button {
@@ -15,6 +37,7 @@
 
   padding: 30px 25px;
   transition: 0.2s;
+  text-align: center;
 }
 
 .tab button:hover {
@@ -32,11 +55,6 @@
   border-top: none;
 
 }
-.munch {
-    text-align: center;
-    padding: 1px;
-    font-size: 20px;
-}
 
 .featured-header {
     display: flex;
@@ -47,9 +65,10 @@
 
 .featured-header span {
     background: #fff;
-    border: 2px solid #222;
+    border: 2px solid #d4d4d4;
     border-radius: 4px;
     padding: 8px 24px;
+    font-style: arial, sans-serif;
     font-size: 1.3rem;
     font-weight: bold;
     letter-spacing: 1px;
@@ -60,27 +79,6 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 32px;
-}
-
-.food-card {
-    background: #f6f6f6;
-    border-radius: 16px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 24px 16px 16px 16px;
-    width: 180px;
-    transition: box-shadow 0.2s;
-}
-
-.food-card img {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
-    margin-bottom: 16px;
-    border-radius: 8px;
-    background: #e8e8e8;
 }
 
 .food-label {
@@ -200,7 +198,8 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 32px;
-}.dessert-card {
+}
+.dessert-card {
     background: #f6f6f6;
     border-radius: 16px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
@@ -225,4 +224,32 @@
     font-size: 1.05rem;
     margin-top: 8px;
     text-align: center;
+}
+
+.add-to-cart {
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    object-fit: contain;
+    background-color: rgb(211, 180, 247);
+    color: rgb(85, 67, 92);
+    border-radius: 8px;
+    padding: 6px 10px;
+    }
+
+@media (max-width: 600px) {
+  .tab { 
+    display: flex;
+    flex-direction: column;
+    justify-content: column;
+    align-items: center;
+    border-radius : 20px;
+    column-width: fit-column;}
+
+  .tab button {
+    float: left;
+    border: none;
+    padding: 30px 25px;
+    transition: 0.2s;
+    text-align: center;}
 }
