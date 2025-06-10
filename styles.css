@@ -236,6 +236,12 @@
     border-radius: 8px;
     padding: 6px 10px;
     }
+.add-to-cart:hover {
+    background-color: #a259e6;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
 
 @media (max-width: 600px) {
   .tab { 
