@@ -220,12 +220,16 @@
         <button id="checkout-button">Pasūtīt</button>
         <button id="clear-cart-button">Notīrīt grozu</button>
         <form id="order-form" style="display:none; margin-top:20px;">
+            <label for="name">Vārds:</label>
+            <input type="text" id="name" name="name" required>
             <label for="address">Adrese:</label>
             <input type="text" id="address" name="address" required>
+            <label for="phone">Telefona numurs:</label>
+            <input type="tel" id="phone" name="phone" required>
             <button type="submit">Apmaksāt</button>
     </form>
         <div id="order-success" style="display:none; color:rgb(105, 21, 232); margin-top:10px;">
-            Pasūtījums pieņemts! Paldies!
+            Pasūtījums pieņemts! Paldies, sazināsimies ar jums drīz!
         </div>
     </div>
     &copy; Reinis 2025
