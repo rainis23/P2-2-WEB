@@ -1,25 +1,24 @@
 function openMenu(evt, tabName) {
-
     var tabcontent = document.getElementsByClassName("tabcontent");
     for (var i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
-    }    
+    }
     var tablinks = document.getElementsByClassName("tablinks");
     for (var i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
 
     document.getElementById(tabName).style.display = "block";
-
     evt.currentTarget.className += " active";
+
+    if (tabName !== "cart") {
+        var orderSuccess = document.getElementById('order-success');
+        if (orderSuccess) orderSuccess.style.display = "none";
+    }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelector(".tablinks").click();
-const VAT = 0.21;
-});
-
 document.addEventListener('DOMContentLoaded', function() {
+    //groza funkcijas
     const cartItems = [];
     const cartList = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total');
@@ -54,23 +53,39 @@ document.addEventListener('DOMContentLoaded', function() {
             updateCart();
         });
     });
-    document.getElementById('clear-cart-button').addEventListener('click', clearCart);});
+    const clearBtn = document.getElementById('clear-cart-button');
+    if (clearBtn) clearBtn.addEventListener('click', clearCart);
 
-    document.addEventListener('DOMContentLoaded', function() {
-
+    //pasutijuma forma
     const orderForm = document.getElementById('order-form');
     const checkoutButton = document.getElementById('checkout-button');
     const orderSuccess = document.getElementById('order-success');
+    const orderError = document.getElementById('order-error');
 
-    checkoutButton.addEventListener('click', function() {
-        orderForm.style.display = 'block';
-        orderSuccess.style.display = 'none';
-    });
+    if (checkoutButton) {
+        checkoutButton.addEventListener('click', function() {
+            orderForm.style.display = 'block';
+            orderSuccess.style.display = 'none';
+            orderError.style.display = 'none';
+        });
+    }
 
-    orderForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        orderForm.style.display = 'none';
-        orderSuccess.style.display = 'block';
-        clearCart();
-    });
-    });
+    if (orderForm) {
+        orderForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const address = document.getElementById('address').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+
+            if (address === '' || phone === '') {
+                orderError.textContent = 'Lūdzu, aizpildiet visus laukus!';
+                orderError.style.display = 'block';
+                return;
+            }
+
+            orderError.style.display = 'none';
+            orderForm.style.display = 'none';
+            orderSuccess.style.display = 'block';
+            clearCart();
+        });
+    }
+});

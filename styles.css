@@ -1,20 +1,55 @@
-.title {
-      color: rgb(0, 0, 0);
-      padding: 20px;
-      text-align: center;
-      align-items: center;
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
+.food-card {
+    background: #f6f6f6;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px 16px 16px;
+    width: 180px;
+    transition: box-shadow 0.2s;
+}
+
+.food-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    background: #e8e8e8;
+}
+
+.title {
+    background: #f6f6f6;
+    color: #6a2ca2;
+    padding: 28px 0 18px 0;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(162, 89, 230, 0.08);
+    text-align: center;
+    margin: 32px auto 24px auto;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.075);}
+
 .title h1 {
-      margin: 0;
-      font-size: 2.5rem;
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .title p {
-      margin-top: 10px;
-      font-size: 1.2rem;
-      font-style: italic;
-    }
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-style: bold;
+    color: #27114d;
+}
 
 .tablinks {
     font-size: 20px;
@@ -244,7 +279,7 @@
 }
 
 #cart {
-     background: #f6f6f6;
+    background: #f6f6f6;
     border-radius: 16px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     padding: 28px 24px 20px 24px;
@@ -256,32 +291,31 @@
     font-size: 1.08rem;
 }
 #cart h2 {
-    text-align: center;
     margin-bottom: 12px;
     color: #6a2ca2;
     font-size: 1.4rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 #cart-items {
     list-style: none;
     padding: 0;
     margin: 0 0 10px 0;
-    text-align: center;
     letter-spacing: 1px;
     font-size: 1.1rem;
 }
 #checkout-button, #clear-cart-button {
-    background-color: #d190f7;
-    color: white;
+    background-color: #6a2ca2;
+    color: #fff;              
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s;
+    font-weight: bold;
 }
 #checkout-button:hover, #clear-cart-button:hover {
-    background-color: #a259e6;
+    background-color: #4b1c6a; /* vēl tumšāks uz hover */
     color: #fff;
 }
 #order-form {

@@ -7,28 +7,10 @@
     <title>Munchies Spot</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preload" as="image" href="image/pizza-tile.avif">
-    <style>
-        .food-card {
-    background: #f6f6f6;
-    border-radius: 16px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 24px 16px 16px 16px;
-    width: 180px;
-    transition: box-shadow 0.2s;
-}
-
-        .food-card img {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
-    margin-bottom: 16px;
-    border-radius: 8px;
-    background: #e8e8e8;
-}
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
 </head>
 <body>
     <header>
@@ -65,7 +47,7 @@
                 <button class="add-to-cart" data-name="Hawajiešu pica" data-price="9.49">Pievienot grozam</button>
             </div>
             <div class="food-card">
-                <img src="image/spicy.png" alt="Spicy pizza with Halapeno">
+                <img src="image/Supreme-Delux-75148da9.webp" alt="Spicy pizza with Halapeno">
                 <div class="food-label">Asā pica</div>
                 <div class="food-price" data-price="9.99">€9.99</div>
                 <button class="add-to-cart" data-name="Asā pica" data-price="9.99">Pievienot grozam</button>
@@ -83,7 +65,7 @@
                 <button class="add-to-cart" data-name="McRoyal" data-price="3.59">Pievienot grozam</button>
             </div>
             <div class="food-card">
-                <img src="image/McD_web2021_Chickenburger-1-1024x693.png" alt="Chicken Burger">
+                <img src="image/McChicken-Sandwich-at-McDonalds-menu-uk.webp" alt="Chicken Burger">
                 <div class="food-label">Chicken Burger</div>
                 <div class="food-price" data-price="3.99">€3.99</div>
                 <button class="add-to-cart" data-name="Chicken Burger" data-price="3.99">Pievienot grozam</button>
@@ -129,7 +111,7 @@
                 <button class="add-to-cart" data-name="Saldējums" data-price="2.49">Pievienot grozam</button>
             </div>
             <div class="dessert-card">
-                <img src="image/cookie__dark-choc-walnut.png" alt="Choco cookie">
+                <img src="image/chocolatechipxxx_2x_1024x1024_4b6aabfa-7ed7-4a3e-adcb-4badb49263eb.webp" alt="Choco cookie">
                 <div class="dessert-label">Cepums ar šokolādi</div>
                 <div class="dessert-price" data-price="1.99">€1.99</div>
                 <button class="add-to-cart" data-name="Cepums ar šokolādi" data-price="1.99">Pievienot grozam</button>
@@ -207,11 +189,14 @@
 
     <div id="Par mums" class="tabcontent">
         <h2>Par mums</h2>
-        <p>Info par mums...</p>
+        <p>Restorans radīts priekš cheat meals, NO HEALTHY OPTIONS. (izņemot diet coke)</p>
     </div>
     <div id="Piegāde" class="tabcontent">
         <h2>Piegāde</h2>
-        <p>Piegādes info...</p>
+        <p>Piegāde ir ar kurjeru, ievadot datus pirms pasūtijuma.
+            Kurjers sazināsies ar jums pēc pasūtijuma izveides, piedāvājot iedot ēdienu rokās vai arī
+            atstāt pie durvīm.
+        </p>
     </div>
     <div id="cart" class="tabcontent">
         <h2>Grozs</h2>
@@ -220,6 +205,7 @@
         <button id="checkout-button">Pasūtīt</button>
         <button id="clear-cart-button">Notīrīt grozu</button>
         <form id="order-form" style="display:none; margin-top:20px;">
+            <div id="order-error" style="display:none; color: #fff; background: #e74c3c; padding: 8px 12px; border-radius: 6px; margin-bottom: 10px;"></div>
             <label for="name">Vārds:</label>
             <input type="text" id="name" name="name" required>
             <label for="address">Adrese:</label>
@@ -227,12 +213,11 @@
             <label for="phone">Telefona numurs:</label>
             <input type="tel" id="phone" name="phone" required>
             <button type="submit">Apmaksāt</button>
-    </form>
-        <div id="order-success" style="display:none; color:rgb(105, 21, 232); margin-top:10px;">
+        </form>
+        <div id="order-success" style="display:none;">
             Pasūtījums pieņemts! Paldies, sazināsimies ar jums drīz!
         </div>
     </div>
-    &copy; Reinis 2025
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
 </body>
 </html>
